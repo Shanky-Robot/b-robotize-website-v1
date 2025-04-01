@@ -1,0 +1,4 @@
+name = "b-robotize-worker" # Replace with your worker name
+type = "javascript"
+account_id = "7348d7d9761984acfdd82d4070a4b492" # Replace with your Cloudflare account ID
+route = "b-robotize.com/*" # Replace with your domain and path
