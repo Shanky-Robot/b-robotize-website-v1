@@ -130,7 +130,7 @@ addEventListener('fetch', event => {
           </div>
           <div class="container">
               <h1>B Robotize</h1>
-              <h2>Robotics Technology for all</h2>
+              <h2>Robotics Technology for All !</h2>
               <p>
                   Robotics & AI S.T.E.A.M. Products OEM & ODM, Learning Lab Design Solutions Provider.
               </p>
