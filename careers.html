@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - B Robotize</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #000000, #1a237e, #004d40);
+            background-attachment: fixed;
+            color: #ffffff;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header .logo img {
+            max-height: 100px;
+        }
+
+        .header h1,
+        .intro-container h1 {
+            margin: 0;
+            font-family: 'Cheque', monospace;
+        }
+
+        .container,
+        .courses-section,
+        .products-section,
+        .social-feed-section,
+        .contact-section,
+        .careers {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .careers {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            opacity: 0.9;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            opacity: 0.8;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #eee;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="file"],
+        textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: vertical; /* Allow vertical resizing */
+            min-height: 150px;
+        }
+
+        button[type="submit"] {
+            background-color: #1e88e5;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #1565c0;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1001;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        @font-face {
+            font-family: 'Cheque';
+            src: url('Cheque-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @media (max-width: 768px) {
+            form {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="trainings.html">Trainings</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="B Robotize Logo">
+        </div>
+    </header>
+
+    <section class="careers">
+        <h2>Join Our Team</h2>
+        <p>We're always looking for passionate individuals to join B Robotize. If you're excited about robotics and AI, we'd love to hear from you!</p>
+
+        <form action="mailto:info@b-robotize.com" method="post" enctype="multipart/form-data">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="resume">Attach Resume:</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </section>
+
+</body>
+
+</html>

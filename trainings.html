@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainings - B Robotize</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #000000, #1a237e, #004d40);
+            background-attachment: fixed;
+            color: #ffffff;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header .logo img {
+            max-height: 100px;
+        }
+
+        .header h1,
+        .intro-container h1 {
+            margin: 0;
+            font-family: 'Cheque', monospace;
+        }
+
+        .container,
+        .courses-section,
+        .products-section,
+        .social-feed-section,
+        .contact-section,
+        .trainings {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .trainings {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            opacity: 0.9;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            opacity: 0.8;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        p2 {
+            font-size: 2.1em;
+            margin-bottom: 15px;
+            opacity: 0.8;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .training-course {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .course-item {
+            display: flex;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 80%;
+            max-width: 900px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            text-align: left;
+            color: #f0f0f0;
+        }
+
+        .course-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .course-item img {
+            max-width: 250px;
+            height: auto;
+            border-radius: 5px;
+            margin-right: 20px;
+            background-color: #ccc;
+        }
+
+        .course-item p {
+            font-size: 0.95em;
+            opacity: 0.8;
+            margin-bottom: 15px;
+            max-width: none;
+            text-shadow: none;
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .apply-button {
+            display: inline-block;
+            background-color: #1e88e5;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .apply-button:hover {
+            background-color: #1565c0;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1001;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        @font-face {
+            font-family: 'Cheque';
+            src: url('Cheque-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @media (max-width: 768px) {
+            .course-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                width: 95%;
+            }
+
+            .course-item img {
+                margin-right: 0;
+                margin-bottom: 15px;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="trainings.html">Trainings</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="B Robotize Logo">
+        </div>
+    </header>
+
+    <section class="trainings">
+        <h2>Our Training Courses</h2>
+        <p>Enhance your skills with our specialized training programs in robotics and related technologies.</p>
+        <p2>Enroll Today and Upskill to Certification Courses</p2>
+
+        <div class="training-course">
+            <div class="course-item">
+                <img src="images/trainings/3dprinting.jpg" alt="3D Printing & Prototyping">
+                <div>
+                    <h3>3D Printing & Prototyping</h3>
+                    <p>Learn the fundamentals of 3D printing, from design to production. Create prototypes and functional parts.</p>
+                    <p class="price">₹12,000</p>
+                    <a href="#" class="apply-button">Apply Now</a>
+                </div>
+            </div>
+
+            <div class="course-item">
+                <img src="images/trainings/product_design.jpg" alt="Robotics Product Design & Development">
+                <div>
+                    <h3>Robotics Product Design & Development</h3>
+                    <p>Master the design and development process for robotics products. From concept to market, learn all stages.</p>
+                    <p class="price">₹15,000</p>
+                    <a href="#" class="apply-button">Apply Now</a>
+                </div>
+            </div>
+
+            <div class="course-item">
+                <img src="images/trainings/pcb_design.jpg" alt="PCB Design and Prototyping">
+                <div>
+                    <h3>PCB Design and Prototyping</h3>
+                    <p>Gain skills in designing and prototyping printed circuit boards. Learn to create custom PCBs for your projects.</p>
+                    <p class="price">₹13,000</p>
+                    <a href="#" class="apply-button">Apply Now</a>
+                </div>
+            </div>
+
+            <div class="course-item">
+                <img src="images/trainings/adv_robo.jpg" alt="Advanced Robotics Course">
+                <div>
+                    <h3>Advanced Robotics Course</h3>
+                    <p>Dive into advanced topics in robotics, including complex algorithms, control systems, and AI integration.</p>
+                    <p class="price">₹18,000</p>
+                    <a href="#" class="apply-button">Apply Now</a>
+                </div>
+            </div>
+
+            <div class="course-item">
+                <img src="images/trainings/programming.jpg" alt="Embedded Robotics Programming">
+                <div>
+                    <h3>Embedded Robotics Programming</h3>
+                    <p>Learn to program embedded systems for robotics applications. Master microcontroller programming and real-time systems.</p>
+                    <p class="price">₹16,000</p>
+                    <a href="#" class="apply-button">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

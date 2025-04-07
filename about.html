@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - B Robotize</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #000000, #1a237e, #004d40);
+            background-attachment: fixed;
+            color: #ffffff;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1001;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .about-us-container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            color: white;
+        }
+
+        .about-us-container h2 {
+            font-size: 3em;
+            margin-bottom: 0;
+            text-align: center;
+
+        }
+
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+
+        .section:nth-child(even) .text-column {
+            order: 2;
+        }
+
+        .section:nth-child(even) .image-column {
+            order: 1;
+        }
+
+        .image-column,
+        .text-column {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .image-column img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .text-column h3 {
+            font-size: 2.3em;
+            margin-bottom: 15px;
+        }
+
+        .text-column p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .services-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .services-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .services-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .services-list li {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            text-align: center; /* Center text within the list item */
+            display: flex; /* Use flexbox for alignment */
+            flex-direction: column; /* Stack image and text vertically */
+            align-items: center; /* Center items horizontally */
+        }
+
+        .services-list li img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .services-list li h4 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .services-list li p {
+            text-align: center; /* Center paragraph text */
+        }
+
+        .quote-section {
+            text-align: center;
+            margin-top: 40px;
+            padding: 40px 20px;
+            background-color: rgba(255, 255, 255, 0.05); /* Light background for emphasis */
+            border-radius: 8px;
+        }
+
+        .quote-section blockquote {
+            font-size: 1.6em;
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .quote-section p {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="trainings.html">Trainings</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="about-us-container">
+        <h2>About Us</h2>
+
+        <div class="section">
+            <div class="text-column">
+                <h3>Our Company</h3>
+                <p>
+                    B Robotize, under the leadership of Mr. Sankarshan B, drives innovation in robotics and automation.
+                    We specialize in research, development, and training across Robotics, AI, IoT, and Automation, empowering the next generation through STEM education and delivering cutting-edge industrial solutions.
+                    Our commitment is to democratize technology, making robotics and AI accessible through S.T.E.A.M. products, comprehensive learning labs, and tailored solutions for diverse industries.
+                </p>
+                <p>
+                    Our team consists of experts in robotics, AI, and education, who are passionate about pushing the boundaries of technology and making it accessible to all.
+                </p>
+            </div>
+            <div class="image-column">
+                <img src="images/about_us/company.jpg" alt="Company Image">
+            </div>
+        </div>
+
+        <div class="quote-section">
+            <blockquote>
+                "Our vision at B Robotize is to make robotics accessible to all. We're committed to elevating STEM education globally and empowering the next generation of innovators."
+            </blockquote>
+            <p>- Mr. Sankarshan B, Founder</p>
+        </div>
+
+        <div class="section">
+            <div class="image-column">
+                <img src="images/about_us/founder.jpg" alt="Founder's Photo">
+            </div>
+            <div class="text-column">
+                <h3>Our Founder</h3>
+                <p>
+                    Mr. Sankarshan B is the visionary behind B Robotize. He is a Robotics Engineer with 10+ Years Industry Experience with M.Tech in Industrial Automation & Robotics, B.Tech in Mechatronics, Dip. Electrical Engineering.
+                    He recognized the need for accessible robotics and AI education. He founded B Robotize with the goal of democratizing technology and empowering individuals to explore the exciting world of robotics and AI.
+                </p>
+                <p>
+                    Mr. Sankarshan B is committed to fostering innovation and providing high-quality educational resources to inspire the next generation of engineers and technologists.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="services-section">
+        <h2>Our Services</h2>
+        <ul class="services-list">
+            <li>
+                <img src="images/about_us/stem_lab.jpg" alt="STEM Lab Solutions">
+                <h4>Robotics & AI STEM LAB Solutions</h4>
+                <p>We provide comprehensive solutions for setting up Robotics & AI STEM labs, 
+                    Designing and developing tailored robotic learning labs with applications in various industries, 
+                    such as manufacturing, healthcare, agriculture, and more..</p>
+            </li>
+            <li>
+                <img src="images/about_us/education.jpg" alt="STEAM Education">
+                <h4>Robotics & AI STEAM Education</h4>
+                <p>Our educational programs focus on making Robotics & AI accessible through engaging S.T.E.A.M. education offering a range of programs, 
+                    robot kits, lab setup and workshops to nurture young talent and develop a strong foundation in robotics and STEM concepts.</p>
+            </li>
+            <li>
+                <img src="images/about_us/research.jpg" alt="Research & Development">
+                <h4>Robotics & AI Research & Development</h4>
+                <p>We conduct cutting-edge research and development in Robotics & AI to create innovative solutions for various industries. 
+                    Conducting cutting-edge research in robotics and AI, and developing innovative prototypes and technologies for future applications.</p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+
+</html>
