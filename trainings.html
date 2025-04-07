@@ -229,7 +229,12 @@
                     <h3>3D Printing & Prototyping</h3>
                     <p>Learn the fundamentals of 3D printing, from design to production. Create prototypes and functional parts.</p>
                     <p class="price">₹12,000</p>
-                    <a href="#" class="apply-button">Apply Now</a>
+                    <a href="training-details.html" class="apply-button" onclick="showTrainingDetails(event, {
+                        image: 'images/trainings/3dprinting.jpg',
+                        name: '3D Printing & Prototyping',
+                        description: 'Learn the fundamentals of 3D printing, from design to production. Create prototypes and functional parts.',
+                        price: '₹12,000'
+                    });">Apply Now</a>
                 </div>
             </div>
 
@@ -239,7 +244,12 @@
                     <h3>Robotics Product Design & Development</h3>
                     <p>Master the design and development process for robotics products. From concept to market, learn all stages.</p>
                     <p class="price">₹15,000</p>
-                    <a href="#" class="apply-button">Apply Now</a>
+                    <a href="training-details.html" class="apply-button" onclick="showTrainingDetails(event, {
+                        image: 'images/trainings/product_design.jpg',
+                        name: 'Robotics Product Design & Development',
+                        description: 'Master the design and development process for robotics products. From concept to market, learn all stages.',
+                        price: '₹15,000'
+                    });">Apply Now</a>
                 </div>
             </div>
 
@@ -249,7 +259,12 @@
                     <h3>PCB Design and Prototyping</h3>
                     <p>Gain skills in designing and prototyping printed circuit boards. Learn to create custom PCBs for your projects.</p>
                     <p class="price">₹13,000</p>
-                    <a href="#" class="apply-button">Apply Now</a>
+                    <a href="training-details.html" class="apply-button" onclick="showTrainingDetails(event, {
+                        image: 'images/trainings/pcb_design.jpg',
+                        name: 'PCB Design and Prototyping',
+                        description: 'Gain skills in designing and prototyping printed circuit boards. Learn to create custom PCBs for your projects.',
+                        price: '₹13,000'
+                    });">Apply Now</a>
                 </div>
             </div>
 
@@ -259,7 +274,12 @@
                     <h3>Advanced Robotics Course</h3>
                     <p>Dive into advanced topics in robotics, including complex algorithms, control systems, and AI integration.</p>
                     <p class="price">₹18,000</p>
-                    <a href="#" class="apply-button">Apply Now</a>
+                    <a href="training-details.html" class="apply-button" onclick="showTrainingDetails(event, {
+                        image: 'images/trainings/adv_robo.jpg',
+                        name: 'Advanced Robotics Course',
+                        description: 'Dive into advanced topics in robotics, including complex algorithms, control systems, and AI integration.',
+                        price: '₹18,000'
+                    });">Apply Now</a>
                 </div>
             </div>
 
@@ -269,11 +289,31 @@
                     <h3>Embedded Robotics Programming</h3>
                     <p>Learn to program embedded systems for robotics applications. Master microcontroller programming and real-time systems.</p>
                     <p class="price">₹16,000</p>
-                    <a href="#" class="apply-button">Apply Now</a>
+                    <a href="training-details.html" class="apply-button" onclick="showTrainingDetails(event, {
+                        image: 'images/trainings/programming.jpg',
+                        name: 'Embedded Robotics Programming',
+                        description: 'Learn to program embedded systems for robotics applications. Master microcontroller programming and real-time systems.',
+                        price: '₹16,000'
+                    });">Apply Now</a>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        function showTrainingDetails(event, training) {
+            event.preventDefault(); // Prevent default link behavior
+            localStorage.setItem('trainingDetails', JSON.stringify(training));
+            window.location.href = 'training-details.html';
+        }
+
+        window.onload = function() {
+          const trainingDetails = localStorage.getItem('trainingDetails');
+          if (trainingDetails) {
+            localStorage.removeItem('trainingDetails');
+          }
+        }
+    </script>
 
 </body>
 

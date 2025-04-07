@@ -39,7 +39,6 @@
             font-family: 'Cheque', monospace;
         }
 
-        .product-details,
         .course-details {
             text-align: center;
             padding: 40px 20px;
@@ -50,7 +49,6 @@
             margin: 20px auto;
         }
 
-        .product-details img,
         .course-details img {
             max-width: 100%;
             height: auto;
@@ -58,7 +56,6 @@
             margin-bottom: 20px;
         }
 
-        .product-details h2,
         .course-details h2 {
             font-size: 2.5em;
             margin-bottom: 15px;
@@ -66,7 +63,6 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
-        product-details p,
         .course-details p {
             font-size: 1.1em;
             margin-bottom: 20px;
@@ -81,7 +77,7 @@
             margin-bottom: 30px;
         }
 
-        .buy-button {
+        .apply-button {
             display: inline-block;
             background-color: #1e88e5;
             color: #ffffff;
@@ -92,7 +88,7 @@
             transition: background-color 0.3s ease;
         }
 
-        .buy-button:hover {
+        .apply-button:hover {
             background-color: #1565c0;
         }
 
@@ -136,7 +132,6 @@
         }
 
         @media (max-width: 768px) {
-            .product-details,
             .course-details {
                 width: 95%;
             }
@@ -161,67 +156,28 @@
         </div>
     </header>
 
-    <section class="product-details" id="productDetails">
-        </section>
-
     <section class="course-details" id="courseDetails">
         </section>
 
     <script>
-        // Example JavaScript to populate product or course details.
-        // In a real scenario, you would likely fetch this data from a server.
+        window.onload = function() {
+            const courseDetails = JSON.parse(localStorage.getItem('courseDetails'));
 
-        // Function to display product details
-        function showProductDetails(product) {
-            const productDetailsSection = document.getElementById('productDetails');
-            productDetailsSection.innerHTML = `
-                <img src="${product.image}" alt="${product.name}">
-                <h2>${product.name}</h2>
-                <p>${product.description}</p>
-                <p class="price">${product.price}</p>
-                <a href="#" class="buy-button">Buy Now</a>
-            `;
-
-            document.getElementById('courseDetails').style.display = 'none'; // Hide course details
-            productDetailsSection.style.display = 'block'; // Show product details
-        }
-
-        // Function to display course details
-        function showCourseDetails(course) {
-            const courseDetailsSection = document.getElementById('courseDetails');
-            courseDetailsSection.innerHTML = `
-                <img src="${course.image}" alt="${course.name}">
-                <h2>${course.name}</h2>
-                <p>${course.description}</p>
-                <p class="price">${course.price}</p>
-                <a href="#" class="buy-button">Apply Now</a>
-            `;
-            document.getElementById('productDetails').style.display = 'none'; // Hide product details
-            courseDetailsSection.style.display = 'block'; // show course details
-        }
-
-        // Example usage (you would call these functions when a product or course is clicked)
-        // Example Data. Replace with actual data.
-        const productData = {
-            image: "images/beg_robo_kit_v1.jpg",
-            name: "Beginner Robot Kit V1",
-            description: "An easy-to-assemble kit perfect for starting your robotics journey. Includes sensors and motors.",
-            price: "₹2,499"
+            if (courseDetails) {
+                const courseDetailsSection = document.getElementById('courseDetails');
+                courseDetailsSection.innerHTML = `
+                    <img src="${courseDetails.image}" alt="${courseDetails.name}">
+                    <h2>${courseDetails.name}</h2>
+                    <p>${courseDetails.description}</p>
+                    <p class="price">${courseDetails.price}</p>
+                    <a href="#" class="apply-button">Apply Now</a>
+                `;
+            } else {
+                // Handle the case where there's no course data (e.g., display an error message)
+                const courseDetailsSection = document.getElementById('courseDetails');
+                courseDetailsSection.innerHTML = `<p>Course details not found.</p>`;
+            }
         };
-        const courseData = {
-            image: "images/jr_robo.jpg",
-            name: "Junior Robotics & AI",
-            description: "Master the fundamentals of robotics, from basic components to simple programming. Learn to build your own robots!",
-            price: "₹4999"
-        };
-
-        // Example calls. In real application, you call this in event handler for the button clicks.
-        // showProductDetails(productData);
-        // showCourseDetails(courseData);
-
-        // Hide the details initially.
-        document.getElementById('productDetails').style.display = 'none';
-        document.getElementById('courseDetails').style.display = 'none';
     </script>
 </body>
 

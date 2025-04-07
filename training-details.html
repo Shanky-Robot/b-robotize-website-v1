@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details - B Robotize</title>
+    <title>Training Details - B Robotize</title>
     <style>
         body {
             margin: 0;
@@ -39,7 +39,7 @@
             font-family: 'Cheque', monospace;
         }
 
-        .product-details {
+        .training-details {
             text-align: center;
             padding: 40px 20px;
             background-color: rgba(0, 0, 0, 0.2);
@@ -49,21 +49,21 @@
             margin: 20px auto;
         }
 
-        .product-details img {
+        .training-details img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
             margin-bottom: 20px;
         }
 
-        .product-details h2 {
+        training-details h2 {
             font-size: 2.5em;
             margin-bottom: 15px;
             opacity: 0.9;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
-        .product-details p {
+        training-details p {
             font-size: 1.1em;
             margin-bottom: 20px;
             opacity: 0.8;
@@ -77,7 +77,7 @@
             margin-bottom: 30px;
         }
 
-        .buy-button {
+        .apply-button {
             display: inline-block;
             background-color: #1e88e5;
             color: #ffffff;
@@ -88,7 +88,7 @@
             transition: background-color 0.3s ease;
         }
 
-        .buy-button:hover {
+        .apply-button:hover {
             background-color: #1565c0;
         }
 
@@ -132,7 +132,7 @@
         }
 
         @media (max-width: 768px) {
-            .product-details {
+            .training-details {
                 width: 95%;
             }
         }
@@ -156,26 +156,26 @@
         </div>
     </header>
 
-    <section class="product-details" id="productDetails">
-        </section>
+    <section class="training-details" id="trainingDetails">
+    </section>
 
     <script>
         window.onload = function() {
-            const productDetails = JSON.parse(localStorage.getItem('productDetails'));
+            const trainingDetails = JSON.parse(localStorage.getItem('trainingDetails'));
 
-            if (productDetails) {
-                const productDetailsSection = document.getElementById('productDetails');
-                productDetailsSection.innerHTML = `
-                    <img src="${productDetails.image}" alt="${productDetails.name}">
-                    <h2>${productDetails.name}</h2>
-                    <p>${productDetails.description}</p>
-                    <p class="price">${productDetails.price}</p>
-                    <a href="#" class="buy-button">Buy Now</a>
+            if (trainingDetails) {
+                const trainingDetailsSection = document.getElementById('trainingDetails');
+                trainingDetailsSection.innerHTML = `
+                    <img src="${trainingDetails.image}" alt="${trainingDetails.name}">
+                    <h2>${trainingDetails.name}</h2>
+                    <p>${trainingDetails.description}</p>
+                    <p class="price">${trainingDetails.price}</p>
+                    <a href="https://forms.gle/HsZb9JinvyfwNxcm7" class="apply-button" target="_blank">Apply Now</a>
                 `;
             } else {
-                // Handle the case where there's no product data (e.g., display an error message)
-                const productDetailsSection = document.getElementById('productDetails');
-                productDetailsSection.innerHTML = `<p>Product details not found.</p>`;
+                // Handle the case where there's no training data (e.g., display an error message)
+                const trainingDetailsSection = document.getElementById('trainingDetails');
+                trainingDetailsSection.innerHTML = `<p>Training details not found.</p>`;
             }
         };
     </script>
